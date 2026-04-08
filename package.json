@@ -1,0 +1,12 @@
+{
+  "name": "sitemltech",
+  "version": "1.0.0",
+  "description": "Site Estático para empresa MLTech",
+  "license": "ISC",
+  "author": "Brayan Lima",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
