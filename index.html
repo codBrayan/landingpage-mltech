@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header" id="header">
-        <div class="container header-inner">
+        <div class="container header__inner">
             <a href="#home" class="brand">ML<span>Tech</span></a>
 
             <nav class="navbar" id="navbar">
@@ -22,7 +22,7 @@
                 </ul>
             </nav>
 
-            <a href="#contato" class="btn btn-primary header-cta">Solicitar Orçamento</a>
+            <a href="#contato" class="btn btn-primary header__cta">Solicitar Orçamento</a>
 
             <button id="mobile-menu" class="mobile-menu" aria-label="Abrir menu">
                 <span></span>
@@ -33,19 +33,19 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="container hero-inner">
-                <div class="hero-copy">
-                    <span class="eyebrow">MLTech | Consultoria de TI e HaaS</span>
+        <section id="home" class="section-hero">
+            <div class="container section-hero__inner">
+                <div class="section-hero__copy">
+                    <span class="section-hero__eyebrow">MLTech | Consultoria de TI e HaaS</span>
                     <h1>A inteligência de TI que sua empresa precisa, sem o peso de gerenciar uma equipe.</h1>
                     <p>Suporte remoto, gestão de infraestrutura e aluguel de hardware com SLA garantido. Segurança, performance e controle financeiro em uma solução completa.</p>
 
-                    <div class="hero-actions">
+                    <div class="section-hero__actions">
                         <a href="#contato" class="btn btn-primary">Fale com Especialista</a>
                         <a href="#services" class="btn btn-secondary">Ver Serviços</a>
                     </div>
 
-                    <div class="hero-benefits">
+                    <div class="section-hero__benefits">
                         <div>
                             <strong>24/7</strong>
                             <p>Suporte e monitoramento disponível</p>
@@ -61,37 +61,37 @@
                     </div>
                 </div>
 
-                <div class="hero-media">
-                    <img src="assets\servidor-web.webp" alt="Data center moderno" loading="lazy">
-                    <div class="hero-media-label">Infraestrutura de datacenter moderna</div>
+                <div class="section-hero__media">
+                    <img src="assets/servidor-web.webp" alt="Data center moderno" loading="lazy">
+                    <div class="section-hero__media-label">Infraestrutura de datacenter moderna</div>
                 </div>
             </div>
         </section>
 
-        <section class="trustbar">
-            <div class="container trustbar-inner">
+        <section class="section-trustbar">
+            <div class="container section-trustbar__inner">
                 <p>Experiência com</p>
-                <div class="trustbar-grid">
-                    <span class="trust-logo">UNIFI</span>
-                    <span class="trust-logo">DELL</span>
-                    <span class="trust-logo">HP</span>
-                    <span class="trust-logo">LENOVO</span>
-                    <span class="trust-logo">PROXMOX</span>
+                <div class="section-trustbar__grid">
+                    <span class="section-trustbar__logo">UNIFI</span>
+                    <span class="section-trustbar__logo">DELL</span>
+                    <span class="section-trustbar__logo">HP</span>
+                    <span class="section-trustbar__logo">LENOVO</span>
+                    <span class="section-trustbar__logo">PROXMOX</span>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="services-section">
-            <div class="container section-head">
+        <section id="services" class="section-services">
+            <div class="container section-services__head">
                 <p class="section-label">Serviços</p>
                 <h2>Soluções em TI para transformar a operação da sua empresa.</h2>
                 <p class="section-text">Do planejamento estratégico à operação diária, a MLTech entrega infraestrutura, consultoria e HaaS com visibilidade e segurança.</p>
             </div>
 
-            <div class="services-grid">
-                <article class="service-card service-blue">
-                    <div class="service-card-top">
-                        <span class="service-icon">
+            <div class="container section-services__grid">
+                <article class="section-services__card section-services__card--blue">
+                    <div class="section-services__card-top">
+                        <span class="section-services__icon">
                             <i class="fa-regular fa-lightbulb" style="color: rgb(116, 192, 252);"></i>
                         </span>
                         <span>Consultoria Estratégica</span>
@@ -100,9 +100,9 @@
                     <p>Projetos de TI que alinham tecnologias, processos e orçamento para resultados previsíveis.</p>
                 </article>
 
-                <article class="service-card service-purple">
-                    <div class="service-card-top">
-                        <span class="service-icon">
+                <article class="section-services__card section-services__card--purple">
+                    <div class="section-services__card-top">
+                        <span class="section-services__icon">
                             <i class="fa-solid fa-wrench" style="color: rgb(177, 151, 252);"></i>
                         </span>
                         <span>Manutenção e Suporte 24/7 disponível</span>
@@ -111,9 +111,9 @@
                     <p>Resposta rápida, resolução contínua e escalonamento técnico sempre que necessário.</p>
                 </article>
 
-                <article class="service-card service-green">
-                    <div class="service-card-top">
-                        <span class="service-icon">
+                <article class="section-services__card section-services__card--green">
+                    <div class="section-services__card-top">
+                        <span class="section-services__icon">
                             <i class="fa-solid fa-computer" style="color: rgb(67, 204, 75);"></i>
                         </span>
                         <span>HaaS - Aluguel de Dispositivos</span>
@@ -122,9 +122,9 @@
                     <p><b>Computadores, Impressoras, Totens de Auto-Atendimento</b> por assinatura, com substituição, suporte e upgrades inclusos.</p>
                 </article>
 
-                <article class="service-card service-red">
-                    <div class="service-card-top">
-                        <span class="service-icon">
+                <article class="section-services__card section-services__card--red">
+                    <div class="section-services__card-top">
+                        <span class="section-services__icon">
                             <i class="fa-solid fa-building-shield" style="color: rgb(240, 56, 56);"></i>
                         </span>
                         <span>Segurança Cibernética e Backup</span>
@@ -135,14 +135,14 @@
             </div>
         </section>
 
-        <section class="about-section" id="sobre">
-            <div class="container about-inner">
-                <div class="about-copy">
+        <section class="section-about" id="sobre">
+            <div class="container section-about__inner">
+                <div class="section-about__copy">
                     <p class="section-label">Sobre Nós</p>
                     <h2>Mais de 10 anos ajudando empresas a operar TI com eficiência e segurança.</h2>
                     <p>Nossa trajetória é marcada pela confiança, pela inovação e pelo compromisso em oferecer serviços de alta qualidade. Trabalhamos lado a lado com nossos clientes para entender suas necessidades, otimizar processos e garantir ambientes tecnológicos estáveis, seguros e preparados para crescer.</p>
 
-                    <div class="metrics-grid">
+                    <div class="section-about__metrics">
                         <div>
                             <strong>+20</strong>
                             <span>Clientes Ativos</span>
@@ -158,35 +158,35 @@
                     </div>
                 </div>
 
-                <div class="about-media">
-                    <img src="assets\equipe-ti.webp" alt="Equipe MLTech em reunião" loading="lazy">
+                <div class="section-about__media">
+                    <img src="assets/equipe-ti.webp" alt="Equipe MLTech em reunião" loading="lazy">
                 </div>
             </div>
 
-            <div class="container values-grid">
+            <div class="container section-about__values">
                 <article>
-                    <span class="value-icon">
+                    <span class="section-about__value-icon">
                         <i class="fa-solid fa-bullseye" style="color: rgb(37, 132, 227);"></i>
                     </span>
                     <h3>Missão</h3>
                     <p>Entregar tecnologia estratégica com foco em resultados e continuidade operacional.</p>
                 </article>
                 <article>
-                    <span class="value-icon">
+                    <span class="section-about__value-icon">
                         <i class="fa-solid fa-user-group" style="color: rgb(37, 132, 227);"></i>
                     </span>
                     <h3>Valores</h3>
                     <p>Ética, transparência e atendimento humanizado em cada etapa do projeto.</p>
                 </article>
                 <article>
-                    <span class="value-icon">
+                    <span class="section-about__value-icon">
                         <i class="fa-solid fa-award" style="color: rgb(37, 132, 227);"></i>
                     </span>
                     <h3>Qualidade</h3>
                     <p>Processos sólidos, suporte com SLA e entrega de serviços sem surpresas.</p>
                 </article>
                 <article>
-                    <span class="value-icon">
+                    <span class="section-about__value-icon">
                         <i class="fa-solid fa-arrow-trend-up" style="color: rgb(37, 132, 227);"></i>
                     </span>
                     <h3>Inovação</h3>
@@ -195,29 +195,29 @@
             </div>
         </section>
 
-        <section class="differentials">
-            <div class="container section-head section-head-light">
+        <section class="section-differentials">
+            <div class="container section-differentials__head">
                 <p class="section-label">Diferenciais</p>
                 <h2>Por Que Escolher a MLTech?</h2>
             </div>
 
-            <div class="diff-grid container">
+            <div class="section-differentials__grid container">
                 <article>
-                    <span class="diff-icon">
+                    <span class="section-differentials__icon">
                         <i class="fa-solid fa-user-friends" style="color: rgb(255, 255, 255);"></i>
                     </span>
                     <h3>Atendimento Humanizado</h3>
                     <p>Contato direto com especialistas que entendem o negócio por trás da tecnologia.</p>
                 </article>
                 <article>
-                    <span class="diff-icon">
+                    <span class="section-differentials__icon">
                         <i class="fa-regular fa-handshake" style="color: rgb(255, 255, 255);"></i>
                     </span>
                     <h3>SLA Garantido</h3>
                     <p>Compromisso de disponibilidade e resposta rápida para manter sua operação estável.</p>
                 </article>
                 <article>
-                    <span class="diff-icon">
+                    <span class="section-differentials__icon">
                         <i class="fa-solid fa-eye" style="color: rgb(255, 255, 255);"></i>
                     </span>
                     <h3>Monitoramento Proativo</h3>
@@ -226,111 +226,112 @@
             </div>
         </section>
 
-        <section class="testimonials" id="depoimentos">
-            <div class="container section-head">
+        <section class="section-testimonials" id="depoimentos">
+            <div class="container section-testimonials__head">
                 <p class="section-label">Clientes</p>
                 <h2>Depoimentos de quem confia na MLTech</h2>
                 <p class="section-text">Nossos clientes mantêm parcerias duradouras graças à entrega constante de valor e segurança.</p>
             </div>
 
-            <div class="container testimonial-frame">
-                <button class="slider-btn slider-prev" aria-label="Anterior">‹</button>
-                <div class="testimonial-track" id="testimonial-track">
-                    <article class="testimonial-card">
-                        <div class="testimonial-top">
-                            <div class="testimonial-logo"><img src="assets/Logo-De-Carli-Azul-1024x211.png" alt="Carli Mármores" loading="lazy"></div>
-                            <span class="rating">★★★★★</span>
+            <div class="container section-testimonials__frame">
+                <div class="section-testimonials__track" id="testimonial-track">
+                    <article class="section-testimonials__card">
+                        <div class="section-testimonials__card-top">
+                            <div class="section-testimonials__logo"><img src="assets/Logo-De-Carli-Azul-1024x211.png" alt="Carli Mármores" loading="lazy"></div>
+                            <span class="section-testimonials__rating">★★★★★</span>
                         </div>
                         <p>"A MLTech modernizou nossa infraestrutura, reduzindo interrupções e garantindo suporte rápido sempre que precisamos."</p>
                         <strong>Carli Mármores</strong>
                         <span>CEO</span>
                     </article>
 
-                    <article class="testimonial-card">
-                        <div class="testimonial-top">
-                            <div class="testimonial-logo"><img src="assets/contello.png" alt="Contello Contabilidade" loading="lazy"></div>
-                            <span class="rating">★★★★★</span>
+                    <article class="section-testimonials__card">
+                        <div class="section-testimonials__card-top">
+                            <div class="section-testimonials__logo"><img src="assets/contello.png" alt="Contello Contabilidade" loading="lazy"></div>
+                            <span class="section-testimonials__rating">★★★★★</span>
                         </div>
                         <p>"Rodrigo Morais, sócio da Contello: há 12 anos com atendimento confiável e tecnologia alinhada ao nosso crescimento."</p>
                         <strong>Rodrigo Morais</strong>
                         <span>Sócio - Contello Contabilidade</span>
                     </article>
 
-                    <article class="testimonial-card">
-                        <div class="testimonial-top">
-                            <div class="testimonial-logo"><img src="assets/mineirinhos.jpg" alt="Mineirinhos Congelados" loading="lazy"></div>
-                            <span class="rating">★★★★★</span>
+                    <article class="section-testimonials__card">
+                        <div class="section-testimonials__card-top">
+                            <div class="section-testimonials__logo"><img src="assets/mineirinhos.jpg" alt="Mineirinhos Congelados" loading="lazy"></div>
+                            <span class="section-testimonials__rating">★★★★★</span>
                         </div>
                         <p>"A infraestrutura de TI passou a ser uma vantagem competitiva, com hardware renovado e suporte previsível."</p>
                         <strong>José Costa Faria</strong>
                         <span>CEO - Mineirinhos Congelados</span>
                     </article>
 
-                    <article class="testimonial-card">
-                        <div class="testimonial-top">
-                            <div class="testimonial-logo"><img src="assets/protevet.png" alt="Protevet" loading="lazy"></div>
-                            <span class="rating">★★★★★</span>
+                    <article class="section-testimonials__card">
+                        <div class="section-testimonials__card-top">
+                            <div class="section-testimonials__logo"><img src="assets/protevet.png" alt="Protevet" loading="lazy"></div>
+                            <span class="section-testimonials__rating">★★★★★</span>
                         </div>
                         <p>"Somos mais seguros e produtivos desde que a MLTech assumiu nossa gestão de TI e backups."</p>
                         <strong>Ivan Lucas Acadroli</strong>
                         <span>Gestor Financeiro - Protevet</span>
                     </article>
                 </div>
-                <button class="slider-btn slider-next" aria-label="Próximo">›</button>
             </div>
         </section>
 
-        <section class="contact-section" id="contato">
-            <div class="container contact-inner">
-                <div class="contact-copy">
+        <section class="section-contact" id="contato">
+            <div class="container section-contact__inner">
+                <div class="section-contact__copy">
                     <p class="section-label">Contato</p>
-                    <h2>Vamos conversar sobre a TI da sua empresa</h2>
-                    <p>Envie sua demanda e nossa equipe responde em até 24 horas úteis. Informe seu desafio e receba uma proposta personalizada.</p>
-                    <div class="contact-details">
-                        <div>
-                            <strong>Telefone</strong>
-                            <span>(11) 99999-9999</span>
-                        </div>
-                        <div>
-                            <strong>Email</strong>
-                            <span>contato@mltech.com.br</span>
-                        </div>
+                    <h2>Nossa equipe está pronta para entender suas necessidades.</h2>
+                    <p>Entre em contato ou preencha o formulário para propor a melhor solução técnica para sua empresa.</p>
                     </div>
                 </div>
 
-                <form id="contact-form" class="contact-form" action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
-                    <input type="hidden" name="_subject" value="Novo contato via landing page MLTech">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="box">
+                <div class="section-contact__grid">
+                    <form id="contact-form" class="section-contact__form" action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
+                        <input type="hidden" name="_subject" value="Novo contato via landing page MLTech">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
 
-                    <label>
-                        Nome
-                        <input type="text" name="name" required placeholder="Seu nome completo">
-                    </label>
-                    <label>
-                        Email
-                        <input type="email" name="email" required placeholder="seu@email.com">
-                    </label>
-                    <label>
-                        Telefone
-                        <input type="tel" name="phone" required placeholder="(11) 99999-9999">
-                    </label>
-                    <label>
-                        Empresa
-                        <input type="text" name="company" required placeholder="Nome da empresa">
-                    </label>
-                    <label>
-                        Mensagem
-                        <textarea name="message" rows="5" required placeholder="Conte-nos sobre sua necessidade"></textarea>
-                    </label>
+                        <label>
+                            Nome
+                            <input type="text" name="name" required placeholder="Seu nome completo">
+                        </label>
+                        <label>
+                            Email
+                            <input type="email" name="email" required placeholder="seu@email.com">
+                        </label>
+                        <label>
+                            Telefone
+                            <input type="tel" name="phone" required placeholder="(11) 99999-9999">
+                        </label>
+                        <label>
+                            Empresa
+                            <input type="text" name="company" required placeholder="Nome da empresa">
+                        </label>
+                        <label>
+                            Mensagem
+                            <textarea name="message" rows="5" required placeholder="Conte-nos sobre sua necessidade"></textarea>
+                        </label>
 
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="lgpd-consent" required>
-                        <span>Autorizo o uso dos meus dados para contato comercial conforme LGPD.</span>
-                    </label>
+                        <label class="section-contact__checkbox">
+                            <input type="checkbox" id="lgpd-consent" required>
+                            <span>Autorizo o uso dos meus dados para contato comercial conforme LGPD.</span>
+                        </label>
 
-                    <button type="submit" class="btn btn-primary submit-btn">Enviar mensagem</button>
-                </form>
+                        <button type="submit" class="btn btn-primary submit-btn">Enviar mensagem</button>
+                    </form>
+
+                    <div class="section-contact__info">
+                        <h3>Informações de Contato</h3>
+                        <p><strong>Email:</strong> contato@mltech.com.br</p>
+                        <p><strong>Telefone:</strong> (11) 99999-9999</p> 
+                        <p><strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo, SP</p>
+                
+                    </div>
+
+                </div>
+
             </div>
         </section>
     </main>
