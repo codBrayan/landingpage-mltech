@@ -11,13 +11,17 @@
 <body>
     <header class="header" id="header">
         <div class="container header__inner">
-            <a href="#home" class="brand">ML<span>Tech</span></a>
+            <a href="#home" class="brand">
+                <span>
+                    <img src="assets\Logo_MLTech_Fundo_transparente.png" alt="MLTech" class="header-logo">
+                </span>
+            </a>
 
             <nav class="navbar" id="navbar">
                 <ul class="nav-list">
                     <li><a href="#services" class="nav-link">Serviços</a></li>
-                    <li><a href="#haas" class="nav-link">Aluguel</a></li>
-                    <li><a href="#consultoria" class="nav-link">Consultoria</a></li>
+                    <li><a href="#services" class="nav-link">Aluguel</a></li>
+                    <li><a href="#services" class="nav-link">Consultoria</a></li>
                     <li><a href="#sobre" class="nav-link">Sobre</a></li>
                 </ul>
             </nav>
@@ -72,11 +76,14 @@
             <div class="container section-trustbar__inner">
                 <p>Experiência com</p>
                 <div class="section-trustbar__grid">
-                    <span class="section-trustbar__logo">UNIFI</span>
                     <span class="section-trustbar__logo">DELL</span>
                     <span class="section-trustbar__logo">HP</span>
+                    <div class ="section-trustbar__contrast">
+                       <i class="fa-regular fa-star" style="color: rgb(255, 212, 59);"></i>
+                        <span class="section-trustbar__logo">UBIQUITI</span>
+                    </div>
                     <span class="section-trustbar__logo">LENOVO</span>
-                    <span class="section-trustbar__logo">PROXMOX</span>
+                    <span class="section-trustbar__logo">ACER</span>
                 </div>
             </div>
         </section>
@@ -237,7 +244,7 @@
                 <div class="section-testimonials__track" id="testimonial-track">
                     <article class="section-testimonials__card">
                         <div class="section-testimonials__card-top">
-                            <div class="section-testimonials__logo"><img src="assets/Logo-De-Carli-Azul-1024x211.png" alt="Carli Mármores" loading="lazy"></div>
+                            <div class="section-testimonials__logo"><img src="assets\parceiros-logo\Logo-De-Carli-Azul-1024x211.png" alt="Carli Mármores" loading="lazy"></div>
                             <span class="section-testimonials__rating">★★★★★</span>
                         </div>
                         <p>"A MLTech modernizou nossa infraestrutura, reduzindo interrupções e garantindo suporte rápido sempre que precisamos."</p>
@@ -247,7 +254,7 @@
 
                     <article class="section-testimonials__card">
                         <div class="section-testimonials__card-top">
-                            <div class="section-testimonials__logo"><img src="assets/contello.png" alt="Contello Contabilidade" loading="lazy"></div>
+                            <div class="section-testimonials__logo"><img src="assets\parceiros-logo\contello.png" alt="Contello Contabilidade" loading="lazy"></div>
                             <span class="section-testimonials__rating">★★★★★</span>
                         </div>
                         <p>"Rodrigo Morais, sócio da Contello: há 12 anos com atendimento confiável e tecnologia alinhada ao nosso crescimento."</p>
@@ -257,7 +264,7 @@
 
                     <article class="section-testimonials__card">
                         <div class="section-testimonials__card-top">
-                            <div class="section-testimonials__logo"><img src="assets/mineirinhos.jpg" alt="Mineirinhos Congelados" loading="lazy"></div>
+                            <div class="section-testimonials__logo"><img src="assets\parceiros-logo\mineirinhos.jpg" alt="Mineirinhos Congelados" loading="lazy"></div>
                             <span class="section-testimonials__rating">★★★★★</span>
                         </div>
                         <p>"A infraestrutura de TI passou a ser uma vantagem competitiva, com hardware renovado e suporte previsível."</p>
@@ -267,7 +274,7 @@
 
                     <article class="section-testimonials__card">
                         <div class="section-testimonials__card-top">
-                            <div class="section-testimonials__logo"><img src="assets/protevet.png" alt="Protevet" loading="lazy"></div>
+                            <div class="section-testimonials__logo"><img src="assets\parceiros-logo\protevet.png" alt="Protevet" loading="lazy"></div>
                             <span class="section-testimonials__rating">★★★★★</span>
                         </div>
                         <p>"Somos mais seguros e produtivos desde que a MLTech assumiu nossa gestão de TI e backups."</p>
@@ -279,96 +286,122 @@
         </section>
 
         <section class="section-contact" id="contato">
-            <div class="container section-contact__inner">
-                <div class="section-contact__copy">
-                    <p class="section-label">Contato</p>
-                    <h2>Nossa equipe está pronta para entender suas necessidades.</h2>
-                    <p>Entre em contato ou preencha o formulário para propor a melhor solução técnica para sua empresa.</p>
-                    </div>
-                </div>
+    <div class="container section-contact__inner">
+        
+        <div class="section-contact__head">
+            <p class="section-label">Contato</p>
+            <h2>Vamos conversar?</h2>
+            <p class="section-text">Entre em contato ou preencha o formulário para propor a melhor solução técnica para sua empresa.</p>
+        </div> <div class="section-contact__grid">
+            
+            <form id="contact-form" class="section-contact__form" action="https://formsubmit.co/atendimento@mltech.com.br" method="POST">
+                <input type="hidden" name="_subject" value="Novo contato via landing page MLTech">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
 
-                <div class="section-contact__grid">
-                    <form id="contact-form" class="section-contact__form" action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
-                        <input type="hidden" name="_subject" value="Novo contato via landing page MLTech">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="box">
+                <label>
+                    Nome
+                    <input type="text" name="name" required placeholder="Seu nome completo">
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" required placeholder="seu@email.com">
+                </label>
+                <label>
+                    Telefone
+                    <input type="tel" name="phone" required placeholder="(11) 99999-9999">
+                </label>
+                <label>
+                    Empresa
+                    <input type="text" name="company" required placeholder="Nome da empresa">
+                </label>
+                <label>
+                    Mensagem
+                    <textarea name="message" rows="5" required placeholder="Conte-nos sobre sua necessidade"></textarea>
+                </label>
 
-                        <label>
-                            Nome
-                            <input type="text" name="name" required placeholder="Seu nome completo">
-                        </label>
-                        <label>
-                            Email
-                            <input type="email" name="email" required placeholder="seu@email.com">
-                        </label>
-                        <label>
-                            Telefone
-                            <input type="tel" name="phone" required placeholder="(11) 99999-9999">
-                        </label>
-                        <label>
-                            Empresa
-                            <input type="text" name="company" required placeholder="Nome da empresa">
-                        </label>
-                        <label>
-                            Mensagem
-                            <textarea name="message" rows="5" required placeholder="Conte-nos sobre sua necessidade"></textarea>
-                        </label>
+                <button type="submit" class="btn btn-primary submit-btn">Enviar mensagem</button>
+            </form>
 
-                        <label class="section-contact__checkbox">
-                            <input type="checkbox" id="lgpd-consent" required>
-                            <span>Autorizo o uso dos meus dados para contato comercial conforme LGPD.</span>
-                        </label>
-
-                        <button type="submit" class="btn btn-primary submit-btn">Enviar mensagem</button>
-                    </form>
-
-                    <div class="section-contact__info">
-                        <h3>Informações de Contato</h3>
-                        <p><strong>Email:</strong> contato@mltech.com.br</p>
-                        <p><strong>Telefone:</strong> (11) 99999-9999</p> 
-                        <p><strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo, SP</p>
+            <div class="section-contact__info">
                 
+                <article class="section-contact__boxinfo">
+                    <span class="section-contact__boxicon">
+                        <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255);"></i>
+                    </span>
+                    <div>
+                        <h3>Telefone</h3>
+                        <p>(54) 99944-1469</p>
                     </div>
+                </article>
 
-                </div>
+                <article class="section-contact__boxinfo">
+                    <span class="section-contact__boxicon">
+                        <i class="fa-solid fa-envelope" style="color: rgb(255, 255, 255);"></i>
+                    </span>
+                    <div>
+                        <h3>Email</h3>
+                        <p>atendimento@mltech.inf.br</p>
+                    </div>
+                </article>
 
-            </div>
-        </section>
+                <article class="section-contact__boxinfo">
+                    <span class="section-contact__boxicon">
+                        <i class="fa-solid fa-map-pin" style="color: rgb(255, 255, 255);"></i>
+                    </span>
+                    <div>
+                        <h3>Endereço</h3>
+                        <p>Av. Presidente Vargas, 910 - 2º andar - Sala 04<br>Passo Fundo, RS - CEP 99010-001</p>
+                    </div>
+                </article>
+
+                <article class="section-contact__boxinfo section-contact__boxinfo--highlight">
+                    <div>
+                        <h3>Horário de Atendimento</h3>
+                        <p>Segunda a Sexta: 8h às 18h<br>Suporte 24/7 disponível</p>
+                    </div>
+                </article>
+
+            </div> </div> </div> </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-brand">
-                <span class="brand">ML<span>Tech</span></span>
-                <p>Soluções completas em infraestrutura, consultoria e HaaS.</p>
+                <img src="assets\LogoMltech - sem icone.png" alt="" class="footer-logo"> 
+                <p>Soluções completas de infraestrutura de TI para empresas que buscam excelência.</p>
+
             </div>
+
 
             <div class="footer-links">
                 <div>
-                    <h4>Navegação</h4>
+                    <h4>Serviços</h4>
                     <a href="#services">Serviços</a>
-                    <a href="#haas">Aluguel</a>
-                    <a href="#consultoria">Consultoria</a>
-                    <a href="#contato">Contato</a>
+                    <a href="#services">Aluguel</a>
+                    <a href="#services">Consultoria</a>
+                    <a href="#services">Segurança</a>
                 </div>
                 <div>
                     <h4>Contato</h4>
-                    <span>contato@mltech.com.br</span>
-                    <span>(11) 99999-9999</span>
+                    <span>atendimento@mltech.inf.br</span>
+                    <span>(54) 99214-3085</span>
+                     <div>
+                        <a href="https://www.instagram.com/mltech.informatica/">
+                            <i class="fa-brands fa-instagram" style="color: rgb(213, 213, 213); font-size: 30px;"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 MLTech. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
+            <div class="footer-bottom">
+                <p>© 2026 MLTech. Todos os direitos reservados.</p>
             </div>
         </div>
+
     </footer>
 
     <div class="whatsapp-float">
-        <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20MLTech" target="_blank" rel="noreferrer noopener">
+        <a href="https://wa.me/5554992143085?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20MLTech" target="_blank" rel="noreferrer noopener">
             <span class="whatsapp-status">On-line</span>
             <span class="whatsapp-icon">🟢</span>
             <span>WhatsApp</span>

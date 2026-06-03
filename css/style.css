@@ -89,7 +89,7 @@ section {
 .section-about__copy h2,
 .section-differentials__head h2,
 .section-testimonials__head h2,
-.section-contact__copy h2 {
+.section-contact__head h2 {
     font-size: clamp(2rem, 2.6vw, 3.4rem);
     line-height: 1.05;
 }
@@ -97,8 +97,7 @@ section {
 .section-text,
 .section-hero__copy p,
 .section-about__copy p,
-.section-differentials__grid p,
-.section-contact__copy p {
+.section-differentials__grid p{
     max-width: 680px;
     color: var(--muted);
     font-size: 1.125rem;
@@ -167,6 +166,11 @@ section {
 
 .brand span {
     color: var(--primary);
+}
+
+.header-logo{
+    width: 250px;
+    max-height: auto;
 }
 
 .navbar {
@@ -338,19 +342,34 @@ section {
 }
 
 .section-trustbar__grid {
-    display: flex;
-    flex-direction: row;
-    gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 50px;
+    align-items: center;
+    justify-items: center;
 }
+
 
 .section-trustbar__logo {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     color: var(--muted);
     font-size: 1.5rem;
     font-weight: 700;
 }
+
+.section-trustbar__contrast{
+    display:inline-flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px 20px 35px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 1.5rem;
+    span {
+        color: var(--primary);
+    };
+}
+
 
 /* =========================================
    SERVICES
@@ -589,6 +608,10 @@ section {
     background: transparent;
 }
 
+.section-testimonials__head h2 {
+    margin-bottom: 15px;
+}
+
 .section-testimonials__card {
     flex: 0 0 32%;
     min-width: 320px;
@@ -626,7 +649,7 @@ section {
 }
 
 .section-testimonials__logo img {
-    max-height: 45px;
+    max-height: 40px;
     object-fit: contain;
 }
 
@@ -652,80 +675,212 @@ section {
 }
 
 /* =========================================
-   CONTACT
+   CONTACT SECTION
 ========================================= */
 .section-contact {
     background-color: var(--nav);
+    padding: 80px 0;
 }
 
+/* Container interno da seção: fluxo vertical simples padrão */
 .section-contact__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 48px; /* Espaço uniforme entre o cabeçalho do topo e as colunas de baixo */
+}
+
+/* Alinhamento e centralização dos textos no topo */
+.section-contact__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.section-contact__head h2 {
+    line-height: 1.05;
+    color: #fff;
+    padding-bottom: 4px;
+}
+
+/* Configuração da Grid principal de duas colunas lado a lado */
+.section-contact__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    align-items: start;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.section-contact__copy h2 {
-    margin-bottom: 24px;
+/* Coluna que agrupa os blocos de informações */
+.section-contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+/* Cards individuais de informações */
+.section-contact__boxinfo {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(15, 42, 72, 0.8);
+    border: 1.5px solid rgba(100, 180, 220, 0.4);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
 
+.section-contact__boxinfo:hover {
+    border-color: rgba(100, 180, 220, 0.6);
+    background: rgba(15, 42, 72, 0.95);
+}
+
+/* Quadrado decorativo dos ícones */
+.section-contact__boxicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(37, 132, 227, 0.9));
+    font-size: 1.6rem;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(100, 180, 220, 0.3);
+}
+
+/* Container de textos dentro do card de informação */
+.section-contact__boxinfo > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 6px;
+}
+
+.section-contact__boxinfo h3 {
+    color: #fff;
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.section-contact__boxinfo p {
+    color: rgba(200, 200, 220, 0.9);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Card customizado em destaque (Horário de Atendimento) */
+.section-contact__boxinfo--highlight {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(37, 132, 227, 0.9));
+    border: none;
+    justify-content: center;
+}
+
+.section-contact__boxinfo--highlight > div {
+    text-align: center;
+}
+
+/* Estrutura visual do Formulário */
 .section-contact__form {
     display: grid;
-    gap: 18px;
-    background: var(--surface);
-    border: 1px solid rgba(10, 25, 47, 0.08);
-    border-radius: var(--radius);
-    padding: 32px;
-    box-shadow: 0 24px 64px rgba(10, 25, 47, 0.08);
+    gap: 16px;
+    background: rgb(255, 255, 255);
+    border: 1.5px solid rgba(100, 180, 220, 0.4);
+    border-radius: 16px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
 .section-contact__form label {
     display: grid;
-    gap: 10px;
     font-weight: 600;
-    color: var(--nav);
+    color: #0A192F;
+    font-size: 0.95rem;
 }
 
 .section-contact__form input,
 .section-contact__form textarea {
     width: 100%;
-    border: 1px solid rgba(10, 25, 47, 0.12);
-    border-radius: 14px;
-    padding: 14px 18px;
-    background: #fff;
-    color: var(--nav);
+    border: 1.5px solid #E5E5E5;
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #ffffff;
+    color: #0A192F;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.section-contact__form input::placeholder,
+.section-contact__form textarea::placeholder {
+    color: #999999;
+}
+
+.section-contact__form input:focus,
+.section-contact__form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    background: #FFFFFF;
 }
 
 .section-contact__form textarea {
     resize: vertical;
+    max-height: 85px;
 }
 
-.section-contact__checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 0.95rem;
-    color: var(--muted);
-}
 
 .section-contact__checkbox input {
     width: 18px;
     height: 18px;
-    accent-color: var(--primary);
-    margin-top: 4px;
+    accent-color: #007BFF;
+    margin-top: 2px;
+    flex-shrink: 0;
 }
 
+/* Botão de Envio */
 .submit-btn {
-    width: fit-content;
-    padding: 14px 26px;
+    width: 100%;
+    padding: 12px 24px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.submit-btn:hover {
+    background: #0062D6;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsividade: Garante que o layout quebre para uma coluna em telas menores */
+@media (max-width: 768px) {
+    .section-contact__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 }
 
 /* =========================================
    FOOTER
 ========================================= */
 .footer {
-    background: #081226;
-    color: rgba(255,255,255,0.75);
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.75);
     padding: 48px 0 24px;
 }
 
@@ -738,7 +893,12 @@ section {
 
 .footer-brand .brand {
     font-size: 1.35rem;
-    color: #fff;
+    color: #000000;
+}
+
+.footer-logo{
+    max-width: 320px;
+    max-height: 40px;
 }
 
 .footer-brand p {
@@ -753,7 +913,7 @@ section {
 }
 
 .footer-links h4 {
-    color: #fff;
+    color: #000000;
     margin-bottom: 16px;
 }
 
@@ -761,7 +921,7 @@ section {
 .footer-links span {
     display: block;
     margin-bottom: 10px;
-    color: rgba(255,255,255,0.78);
+    color: rgba(0, 0, 0, 0.78);
 }
 
 .footer-bottom {
@@ -775,15 +935,7 @@ section {
     flex-wrap: wrap;
 }
 
-.social-links {
-    display: flex;
-    gap: 18px;
-}
 
-.social-links a {
-    color: #fff;
-    font-weight: 600;
-}
 
 .whatsapp-float {
     position: fixed;
@@ -791,9 +943,10 @@ section {
     bottom: 24px;
     z-index: 60;
     border-radius: 999px;
-    background: #0A192F;
-    color: #fff;
-    box-shadow: 0 28px 58px rgba(10, 25, 47, 0.25);
+    background: #0e1e37;
+    color: #ffffff;
+    box-shadow: 0 28px 58px rgba(20, 60, 119, 0.25);
+    border: 1px solid rgba(13, 88, 39, 0.3);
 }
 
 .whatsapp-float a {
@@ -801,7 +954,7 @@ section {
     align-items: center;
     gap: 12px;
     padding: 14px 18px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .whatsapp-status {
@@ -912,6 +1065,11 @@ section {
         padding: 0 16px;
     }
 
+    img {
+    max-width: 100%;
+    display: flex;
+    }
+
     .section-hero__actions {
         flex-direction: column;
     }
@@ -930,9 +1088,19 @@ section {
     }
 
     .footer-inner,
-    .footer-bottom {
+    .footer-bottom{
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .footer-links,
+    .footer-brand  {
+
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        align-items: center;
+        justify-items: center;
+        gap: 24px;
     }
 
     .footer-bottom {
