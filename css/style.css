@@ -238,7 +238,6 @@ section {
    HERO
 ========================================= */
 .section-hero {
-    padding-bottom: 50px;
     background: linear-gradient(180deg, rgba(248,249,250,1) 0%, rgba(241,245,249,1) 100%);
 }
 
@@ -247,7 +246,7 @@ section {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 48px;
     align-items: center;
-    min-height: calc(100vh - 144px);
+    min-height: 520px;
 }
 
 .section-hero__eyebrow {
